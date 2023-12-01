@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "5e4f21b7-8ca3-4176-850e-5815c52119b5",
+		"name": "TurbosTrack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "generar token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "/Turb0ckTr4cks2o2A/",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turb0s/tr4ck",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "andres",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "default"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar user prueba",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvQWRpY2lvbmFsIjoiSG9sYSBxdWUgdGFsITogYWRtaW4iLCJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJuYW1lIjoiSm9obiIsImxhc05hbWUiOiJEb2UiLCJleHAiOjE2OTgyOTYzMTksImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiNmIzNjRlZWQtNTAyMi00MWZlLWFiMzItNzMxMTlhNjFkMWE0IiwiZW1haWwiOiJqaG9uLmRvZUBib2xzYWRlaWRlYXMuY29tIiwiY2xpZW50X2lkIjoidHVyYjBzL3RyNGNrIn0.pN8ktryHnKQo4-MpbDr2_OcyAkWFS4Mg61Merg1yX1VfyCxluAfnemQOyMSQiO0sVmfalOqm-2WuakyhMuPCoX3AhGiyveQPh43FoPC6AyYQKH99NQiVtPq_VmrS1RPNm6A-tEqaZcn79UkuavbL_N8Sb5UuO4GSoLOgzpFx-Ux1zKAe5vV6-b98UMn4k4aodqMZhmctxN5bIV-hntvRNfoukGNsu_j9UE94gtv9ntAIHY-dtjK5N6u2PKr9SumlYmmzB0AlVCnT6eCijnPqOX0V1wz_eme9fbOqEy6TSvMtt5wYJQNs457RVxvnvXHnMaowXlrj9PD-KFkJG7sHYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/clientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": []
+		}
+	]
+}
